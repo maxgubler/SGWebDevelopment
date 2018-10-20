@@ -22,7 +22,59 @@ Most recent revision:
         </nav>
 
         <main>
+            <form>
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name" required><br />
 
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" required><br />
+
+                <label for="phone">Phone: </label>
+                <input type="text" id="phone" name="phone" required><br />
+
+                <label for="reason">Reason for Inquiry: </label>
+                <select id="reason" name="reason">
+                    <option value="catering" selected>Catering</option>
+                    <option value="private">Private Party</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <br />
+
+                <label for="info">Additional Information: </label>
+                <textarea id="info" name="info"></textarea>
+
+                 <fieldset>
+                    <legend>Have you been to the restaurant?</legend>
+                    <input type="radio" id="r1" value="no" checked>
+                    <label for="r1">No</label>
+
+                    <input type="radio" id="r2" value="yes">
+                    <label for="r2">Yes</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Best days to contact you: </legend>
+
+                    <input type="checkbox" id="contactMonday" name="contactDay" value="contactMonday">
+                    <label for="contactMonday">M </label>
+
+                    <input type="checkbox" id="contactTuesday" name="contactDay" value="contactTuesday">
+                    <label for="contactTuesday">T </label>
+
+                    <input type="checkbox" id="contactWednesday" name="contactDay" value="contactWednesday">
+                    <label for="contactWednesday">W </label>
+
+                    <input type="checkbox" id="contactThursday" name="contactDay" value="contactThursday">
+                    <label for="contactThursday">Th </label>
+
+                    <input type="checkbox" id="contactFriday" name="contactDay" value="contactFriday">
+                    <label for="contactFriday">F </label>
+                </fieldset>
+
+                <input type="submit" name="submit" value="Send Request">
+            </form>
         </main>
 
         <footer>
