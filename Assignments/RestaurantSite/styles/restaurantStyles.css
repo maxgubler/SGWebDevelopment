@@ -4,10 +4,6 @@ Date created: October 22, 2018
 Date last modified:
 */
 
-body {
-    margin: 0;
-}
-
 header, footer {
     text-align: center;
 }
@@ -16,24 +12,10 @@ header h1 {
     font-family: 'Righteous', cursive;
 }
 
-nav {
-    border-top: 5px solid #803315;
-    border-bottom: 5px solid #803315;
-    padding: 10px;
-}
-
 footer {
-    border-top: 5px solid #803315;
-}
-
-nav a:visited {
-    color: #806515;
+    border-top: 1px solid #343a40;
 }
 
 nav a:hover {
-    font-weight: bold;
-}
-
-nav a:active {
-    text-decoration: none;
+    background-color: #222222;
 }
