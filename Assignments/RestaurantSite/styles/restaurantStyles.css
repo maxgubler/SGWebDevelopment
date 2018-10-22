@@ -4,6 +4,14 @@ Date created: October 22, 2018
 Date last modified:
 */
 
+body {
+    margin: 0;
+}
+
+header, footer {
+    text-align: center;
+}
+
 header h1 {
     font-family: 'Righteous', cursive;
 }
@@ -28,4 +36,7 @@ nav a:active {
 
 main {
     background-color: #FFEAAA;
+    width: 75%;
+    min-width: 400px;
+    margin: 0 auto;
 }
