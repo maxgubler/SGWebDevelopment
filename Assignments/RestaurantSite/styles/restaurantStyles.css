@@ -22,6 +22,10 @@ nav {
     padding: 10px;
 }
 
+footer {
+    border-top: 5px solid #803315;
+}
+
 nav a:visited {
     color: #806515;
 }
@@ -32,11 +36,4 @@ nav a:hover {
 
 nav a:active {
     text-decoration: none;
-}
-
-main {
-    background-color: #FFEAAA;
-    width: 75%;
-    min-width: 400px;
-    margin: 0 auto;
 }
