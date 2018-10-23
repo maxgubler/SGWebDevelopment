@@ -1,8 +1,23 @@
 /*
 Creator: Max Gubler
-Date created: October 22, 2018
-Date last modified:
+Date Created: October 22, 2018
+Last Modified: October 23, 2018
 */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url('/images/bg-1920w.jpg');
+    background-position: center;
+    background-size: 1920px;
+    background-repeat: repeat-y;
+}
+
+header {
+    background-color: #FFFFFF;
+}
 
 header h1 {
     font-family: 'Mr Dafoe', cursive;
