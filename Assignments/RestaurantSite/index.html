@@ -16,22 +16,23 @@ Most recent revision: October 22, 2018
         <link rel="stylesheet" type="text/css" href="styles/restaurantStyles.css">
     </head>
     <body>
-        <header>
+        <header class="text-center">
             <h1>Alma Libre</h1>
+            <nav class="navbar navbar-expand-md nav-pills navbar-dark bg-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link active" href="index.html">Home</a>
+                        <a class="nav-item nav-link" href="menu.html">Menu</a>
+                        <a class="nav-item nav-link" href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+            </nav>
         </header>
 
-        <nav class="navbar navbar-expand-md nav-pills navbar-dark bg-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="index.html">Home</a>
-                    <a class="nav-item nav-link" href="menu.html">Menu</a>
-                    <a class="nav-item nav-link" href="contact.html">Contact Us</a>
-                </div>
-            </div>
-        </nav>
+
 
         <main class="container-fluid">
             <section class="row">
@@ -109,6 +110,7 @@ Most recent revision: October 22, 2018
             </section>
         </main>-->
 
+<!-- TODO: Fix footer overlap on small displays -->
         <footer>
             <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark row">
                 <ul class="navbar-nav m-auto">
