@@ -13,8 +13,14 @@ nav a:hover {
 }
 
 .carousel {
-    background-color: #DDDDDD;
-    min-height: 200px;
+    background-color: #e95a4f;
+    min-height: 720px;
+}
+
+.carouselSide {
+    background-image: url('https://via.placeholder.com/720x720');
+    background-position: center;
+    min-height: 720px;
 }
 
 .jumbotron {
