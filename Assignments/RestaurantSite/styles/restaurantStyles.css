@@ -17,18 +17,31 @@ body {
 
 header {
     background-color: #FFFFFF;
+    box-shadow: 0 1px 10px -2px #949494;
+    position: relative;
+    z-index: 999;
 }
 
 header h1 {
     font-family: 'Mr Dafoe', cursive;
 }
 
-nav a:hover {
-    background-color: #222222;
+.navbar-light .navbar-toggler {
+    border-color: #F4CF3B;
+}
+
+.nav-pills .nav-link {
+    border: 1px solid #F4CF3B;
+    color: #333333;
+    min-width: 7em;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: #FFFBE9;
 }
 
 .carousel {
-    background-color: #e95a4f;
+    background-color: #E95A4F;
     min-height: 720px;
 }
 
@@ -40,11 +53,15 @@ nav a:hover {
 
 .jumbotron {
     padding: 0;
-    box-shadow: 0 1px 10px -2px #949494;
+    border-radius: 0 0 0.3rem 0.3rem;
+    background-color: #FFFFFF;
+    border-left: 1px solid #F4CF3B;
+    border-right: 1px solid #F4CF3B;
 }
 
 .jumbotron .row div {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #F4CF3B;
+    padding: 0.5em;
 }
 
 .jumbotron .row > div:nth-child(1) {
