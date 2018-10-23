@@ -4,16 +4,12 @@ Date created: October 22, 2018
 Date last modified:
 */
 
-header, footer {
+header {
     text-align: center;
 }
 
 header h1 {
     font-family: 'Mr Dafoe', cursive;
-}
-
-footer {
-    border-top: 1px solid #343a40;
 }
 
 nav a:hover {
