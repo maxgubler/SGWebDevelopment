@@ -98,11 +98,11 @@ footer .navbar-dark .navbar-text a:focus, footer .navbar-dark .navbar-text a:hov
 .menuContainer {
     margin-top: 2rem;
     background-color: #FFFFFF;
+    font-family: 'Crimson Text', serif;
 }
 
 .menuItem {
-    padding: 1em;
-    font-family: 'Crimson Text', serif;
+    padding: 1em 0;
 }
 
 .menuItem div:nth-child(1) {
