@@ -15,11 +15,6 @@ Last Modified: October 23, 2018
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mr+Dafoe" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="styles/restaurantStyles.css">
-        <style>
-            .required {
-                font-weight: bold;
-            }
-        </style>
     </head>
     <body>
         <header class="text-center">
@@ -63,60 +58,94 @@ Last Modified: October 23, 2018
             </nav>
         </header>
 
-        <main>
-            <form>
-                <label class="required" for="name">Name: </label>
-                <input type="text" id="name" name="name" required><br />
+        <main class="contactContainer container">
+            <section class="row">
+                <article class="col-12 p-5">
+                    <form class="needs-validation">
+                        <!-- First and Last Name -->
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="firstName">First name</label>
+                                <input name="firstName" id="firstName" class="form-control" type="text" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="lastName">Last name</label>
+                                <input name="lastName" id="lastName" class="form-control" type="text" required>
+                            </div>
+                        </div>
 
-                <label class="required" for="email">Email: </label>
-                <input type="email" id="email" name="email" required><br />
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input name="email" id="email" class="form-control" type="email" required>
+                        </div>
 
-                <label class="required" for="phone">Phone: </label>
-                <input type="text" id="phone" name="phone" required><br />
+                        <!-- Telephone -->
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input name="phone" id="phone" class="form-control" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-555-5555" type="tel" required>
+                        </div>
 
-                <label for="reason">Reason for Inquiry: </label>
-                <select id="reason" name="reason">
-                    <option value="catering" selected>Catering</option>
-                    <option value="private">Private Party</option>
-                    <option value="feedback">Feedback</option>
-                    <option value="other">Other</option>
-                </select>
+                        <!-- Reason for inquiry -->
+                        <div class="form-group">
+                            <label for="reason">Reason for inquiry</label>
+                            <select name="reason" id="reason" class="form-control">
+                                <option value="catering" selected>Catering</option>
+                                <option value="private">Private Party</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
 
-                <br />
+                        <!-- Addition information -->
+                        <div class="form-group">
+                            <label for="info">Additional information</label>
+                            <textarea name="info" id="info" class="form-control" rows="3"></textarea>
+                        </div>
 
-                <label for="info">Additional Information: </label>
-                <textarea id="info" name="info"></textarea>
+                        <!-- Visted -->
+                        <div class="form-group">
+                            <label class="d-block">Have you visited our restaurant?</label>
+                            <div class="form-check form-check-inline">
+                                <input name="radioVisited" id="radioYes" value="yes" class="form-check-input" type="radio">
+                                <label for="radioYes" class="form-check-label">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input name="radioVisited" id="radioNo" value="no" class="form-check-input" type="radio">
+                                <label for="radioNo" class="form-check-label">No</label>
+                            </div>
+                        </div>
 
-                 <fieldset>
-                    <legend>Have you been to the restaurant?</legend>
-                    <input type="radio" id="r1" value="no" checked>
-                    <label for="r1">No</label>
+                        <!-- Contact day -->
+                        <div class="form-group">
+                            <label class="d-block">Best days to contact you</label>
+                            <div class="form-check form-check-inline">
+                                <input name="contactDay" id="checkMonday" value="monday" class="form-check-input" type="checkbox">
+                                <label for="checkMonday" class="form-check-label">Mon</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input name="contactDay" id="checkTuesday" value="tuesday" class="form-check-input" type="checkbox">
+                                <label for="checkTuesday" class="form-check-label">Tues</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input name="contactDay" id="checkWednesday" value="wednesday" class="form-check-input" type="checkbox">
+                                <label for="checkWednesday" class="form-check-label">Wed</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input name="contactDay" id="checkThursday" value="thursday" class="form-check-input" type="checkbox">
+                                <label for="checkThursday" class="form-check-label">Thurs</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input name="contactDay" id="checkFriday" value="friday" class="form-check-input" type="checkbox">
+                                <label for="checkFriday" class="form-check-label">Fri</label>
+                            </div>
+                        </div>
 
-                    <input type="radio" id="r2" value="yes">
-                    <label for="r2">Yes</label>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Best days to contact you: </legend>
-
-                    <input type="checkbox" id="contactMonday" name="contactDay" value="contactMonday">
-                    <label for="contactMonday">M </label>
-
-                    <input type="checkbox" id="contactTuesday" name="contactDay" value="contactTuesday">
-                    <label for="contactTuesday">T </label>
-
-                    <input type="checkbox" id="contactWednesday" name="contactDay" value="contactWednesday">
-                    <label for="contactWednesday">W </label>
-
-                    <input type="checkbox" id="contactThursday" name="contactDay" value="contactThursday">
-                    <label for="contactThursday">Th </label>
-
-                    <input type="checkbox" id="contactFriday" name="contactDay" value="contactFriday">
-                    <label for="contactFriday">F </label>
-                </fieldset>
-
-                <input type="submit" name="submit" value="Send Request">
-            </form>
+                        <!-- Submit -->
+                        <input type="submit" name="submit" value="Send Request">
+                    </form>
+                </article>
+            </section>
         </main>
 
         <footer class="container-fluid fixed-bottom">
