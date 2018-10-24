@@ -45,6 +45,15 @@ header h1 {
     background-color: #FFFBE9;
 }
 
+footer .navbar-dark .navbar-text {
+    font-size: 0.75em;
+}
+
+footer .navbar-dark .navbar-text a:focus, footer .navbar-dark .navbar-text a:hover {
+    text-decoration: none;
+    color: #F4CF3B;
+}
+
 .carousel {
     background-color: #E95A4F;
     min-height: 720px;
