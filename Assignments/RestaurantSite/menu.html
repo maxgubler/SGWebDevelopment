@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <!--
-Name: Max Gubler
+Creator: Max Gubler
 Date Created: October 20, 2018
-Most recent revision: October 22, 2018
+Last Modified: October 23, 2018
 -->
 <html lang="en">
     <head>
@@ -12,7 +12,8 @@ Most recent revision: October 22, 2018
         <title>Menu</title>
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mr+Dafoe">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mr+Dafoe" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="styles/restaurantStyles.css">
         <style>
             main {
@@ -38,22 +39,25 @@ Most recent revision: October 22, 2018
         </style>
     </head>
     <body>
-        <header>
-            <h1>Alma Libre</h1>
-        </header>
-
-        <nav class="navbar navbar-expand-md nav-pills navbar-dark bg-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="index.html">Home</a>
-                    <a class="nav-item nav-link active" href="menu.html">Menu</a>
-                    <a class="nav-item nav-link" href="contact.html">Contact Us</a>
+        <header class="text-center">
+            <nav class="navbar navbar-expand-md nav-pills navbar-light container-fluid">
+                <div class="row m-0 w-100">
+                    <button type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler col-auto mr-auto">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="col-auto col-md-12">
+                        <h1>Alma Libre</h1>
+                    </div>
+                    <div id="navbarNavAltMarkup" class="collapse navbar-collapse col-md-12 p-0">
+                        <div class="navbar-nav m-auto">
+                            <a class="nav-item nav-link active" href="index.html"><i class="fas fa-home"></i></a>
+                            <a class="nav-item nav-link" href="menu.html">Menu</a>
+                            <a class="nav-item nav-link" href="contact.html">Contact Us</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </header>
 
         <main>
             <table>
@@ -106,9 +110,21 @@ Most recent revision: October 22, 2018
             </table>
         </main>
 
-        <footer>
-            <p>16 S 5th St, Minneapolis, MN 55402</p>
-            <p>555-555-5555</p>
+        <footer class="container-fluid fixed-bottom">
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark row">
+                <div class="navbar-nav w-100">
+                    <div class="navbar-text text-center col-12 col-sm-6 p-0">
+                        <i class="fas fa-map-marked-alt"></i><span style="margin-left: 1em;"><a href="https://www.google.com/maps/place/15+S+5th+St,+Minneapolis,+MN+55402" target="_blank">15 S 5th St, Minneapolis, MN 55402</a></span>
+                        <br>
+                        <i class="fas fa-mobile-alt"></i><span style="margin-left: 1em;">855-59-9584</span>
+                    </div>
+                    <div class="navbar-text text-center col-12 col-sm-6 p-0">
+                        <i class="fas fa-map-marked-alt"></i><span style="margin-left: 1em;"><a href="https://www.google.com/maps/place/353+Harbor+Dr,+Duluth,+MN+55802" target="_blank">353 Harbor Dr, Duluth, MN 55802</a></span>
+                        <br>
+                        <i class="fas fa-mobile-alt"></i><span style="margin-left: 1em;">218-74-3474</span>
+                    </div>
+                </div>
+            </nav>
         </footer>
 
         <!-- Bootstrap js requirements -->
