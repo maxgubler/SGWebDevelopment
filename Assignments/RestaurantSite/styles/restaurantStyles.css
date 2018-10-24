@@ -60,8 +60,8 @@ footer .navbar-dark .navbar-text a:focus, footer .navbar-dark .navbar-text a:hov
 }
 
 .carouselSide {
-    background-image: url('https://via.placeholder.com/720x720');
-    background-position: center;
+    background-image: url('/images/sample-720.jpg');
+    background-position: right;
     min-height: 720px;
 }
 
