@@ -15,74 +15,6 @@ Last Modified: October 25, 2018
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mr+Dafoe" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="styles/restaurantStyles.css">
-        <script>
-            /* Display or remove validity results message */
-            function results(valid) {
-                if (valid === true) {
-                    document.getElementById("results").innerText = "Your provided information is validated";
-                    document.getElementById("results").style.display = "block";
-
-                    return true;
-                }
-                else {
-                    document.getElementById("results").innerText = "";
-                    document.getElementById("results").style.display = "none";
-
-                    return false;
-                }
-            }
-
-            function validate(target) {
-                var form = document.forms["contactForm"];
-
-                /* Extend upon HTML5 validation to see if either name entry is entirely a number */
-                if (target === form["firstName"] || target === form["lastName"]) {
-                    if (isNaN(target.value) == false) {
-                        target.setCustomValidity("This field must not be a number");
-
-                        return false;
-                    }
-                    else {
-                        target.setCustomValidity("");
-
-                        return true;
-                    }
-                }
-
-                /* Check whole form validity and display or remove results message */
-                else if (target === form["btnSubmit"]) {
-                    if (form.reportValidity()) {
-                        results(true);
-                    }
-                    else {
-                        results(false);
-                    }
-                }
-
-                else {
-                    return true;
-                }
-            }
-
-            function initialize() {
-                var form = document.forms["contactForm"];
-
-                /* Reset form and results */
-                form.reset();
-                results(false);
-
-                /* On submit: Prevent submission and then validate form */
-                form.addEventListener("submit", function(e) {
-                    e.preventDefault();
-                    validate(form["btnSubmit"]);
-                });
-
-                /* Validate the input value after losing focus */
-                form.addEventListener("blur", function(e) {
-                    validate(e.target);
-                }, true);
-            }
-        </script>
     </head>
     <body onload="initialize()">
         <header class="text-center">
@@ -236,9 +168,12 @@ Last Modified: October 25, 2018
             </nav>
         </footer>
 
-        <!-- Bootstrap js requirements -->
+        <!-- Bootstrap JS Requirements -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+        <!-- Contact Page Validation Script -->
+        <script src="scripts/contact.js"></script>
     </body>
 </html>
