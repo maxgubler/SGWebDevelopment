@@ -2,7 +2,7 @@
 <!--
 Creator: Max Gubler
 Date Created: October 20, 2018
-Last Modified: October 23, 2018
+Last Modified: October 25, 2018
 -->
 <html lang="en">
     <head>
@@ -15,8 +15,75 @@ Last Modified: October 23, 2018
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mr+Dafoe" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="styles/restaurantStyles.css">
+        <script>
+            /* Display or remove validity results message */
+            function results(valid) {
+                if (valid === true) {
+                    document.getElementById("results").innerText = "Your provided information is validated";
+                    document.getElementById("results").style.display = "block";
+
+                    return true;
+                }
+                else {
+                    document.getElementById("results").innerText = "";
+                    document.getElementById("results").style.display = "none";
+
+                    return false;
+                }
+            }
+
+            function validate(target) {
+                var form = document.forms["contactForm"];
+
+                /* Extend upon HTML5 validation to see if either name entry is entirely a number */
+                if (target === form["firstName"] || target === form["lastName"]) {
+                    if (isNaN(target.value) == false) {
+                        target.setCustomValidity("This field must not be a number");
+
+                        return false;
+                    }
+                    else {
+                        target.setCustomValidity("");
+
+                        return true;
+                    }
+                }
+
+                /* Check whole form validity and display or remove results message */
+                else if (target === form["btnSubmit"]) {
+                    if (form.reportValidity()) {
+                        results(true);
+                    }
+                    else {
+                        results(false);
+                    }
+                }
+
+                else {
+                    return true;
+                }
+            }
+
+            function initialize() {
+                var form = document.forms["contactForm"];
+
+                /* Reset results */
+                results(false);
+
+                /* On submit: Prevent submission and then validate form */
+                form.addEventListener("submit", function(e) {
+                    e.preventDefault();
+                    validate(form["btnSubmit"]);
+                });
+
+                /* Validate input in after losing input focus) */
+                form.addEventListener("blur", function(e) {
+                    validate(e.target);
+                }, true);
+            }
+        </script>
     </head>
-    <body>
+    <body onload="initialize()">
         <header class="text-center">
             <nav class="navbar navbar-expand-md nav-pills navbar-light container-fluid">
                 <div class="row m-0 w-100">
@@ -61,7 +128,7 @@ Last Modified: October 23, 2018
         <main class="contactContainer container">
             <section class="row">
                 <article class="col-12 p-5">
-                    <form class="needs-validation">
+                    <form name="contactForm" onsubmit="return validate(target);" class="needs-validation">
                         <!-- First and Last Name -->
                         <div class="form-row">
                             <div class="form-group col-md-6">
@@ -107,7 +174,7 @@ Last Modified: October 23, 2018
                         <div class="form-group">
                             <label class="d-block">Have you visited our restaurant?</label>
                             <div class="form-check form-check-inline">
-                                <input name="radioVisited" id="radioYes" value="yes" class="form-check-input" type="radio">
+                                <input name="radioVisited" id="radioYes" value="yes" class="form-check-input" type="radio" checked>
                                 <label for="radioYes" class="form-check-label">Yes</label>
                             </div>
                             <div class="form-check form-check-inline">
@@ -141,8 +208,10 @@ Last Modified: October 23, 2018
                             </div>
                         </div>
 
+                        <div id="results" class="form-group" style="display: none;"></div>
+
                         <!-- Submit -->
-                        <input type="submit" name="submit" value="Send Request">
+                        <input name="btnSubmit" class="btn btn-theme" value="Send Request" type="submit">
                     </form>
                 </article>
             </section>

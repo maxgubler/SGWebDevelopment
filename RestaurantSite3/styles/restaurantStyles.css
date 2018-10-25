@@ -1,7 +1,7 @@
 /*
 Creator: Max Gubler
 Date Created: October 22, 2018
-Last Modified: October 23, 2018
+Last Modified: October 24, 2018
 */
 
 html, body {
@@ -41,7 +41,7 @@ header h1 {
     min-width: 7em;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
     background-color: #FFFBE9;
 }
 
@@ -113,4 +113,9 @@ footer .navbar-dark .navbar-text a:focus, footer .navbar-dark .navbar-text a:hov
 .contactContainer {
     margin-top: 2rem;
     background-color: #FFFFFF;
+}
+
+.btn-theme {
+    background-color: #F4CF3B;
+    border: 1px solid #CED4dA;
 }
