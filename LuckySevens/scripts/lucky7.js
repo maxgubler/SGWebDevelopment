@@ -10,7 +10,7 @@ function displayResults(startingBet, rollCountTotal, highestAmount, rollCountAtH
 
 function displayErrorMsg() {
     document.getElementById('errorMsg').textContent = 'Please enter a number greater than zero';
-    document.getElementById('errorMsg').style.display = 'block';
+    document.getElementById('errorMsg').style.visibility = 'visible';
 }
 
 function resetStartingBet() {
@@ -20,7 +20,7 @@ function resetStartingBet() {
 
 function resetOutput() {
     document.getElementById('errorMsg').textContent = '';
-    document.getElementById('errorMsg').style.display = 'none';
+    document.getElementById('errorMsg').style.visibility = 'hidden';
     document.getElementById('results').style.display = 'none';
     document.getElementById('tableStartingBet').textContent = '';
     document.getElementById('tableRollCountTotal').textContent = '';
