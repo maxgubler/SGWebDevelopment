@@ -27,28 +27,42 @@ function resetOutput() {
     document.getElementById('tableRollCountAtHighest').textContent = '';
 }
 
-function parseStartingBet() {
-    var startingBet = document.forms['betForm']['startingBet'].value;
+/* Check each character for a number or decimal point, allowing only one decimal point */
+/* This also prevents negative numbers */
+function scanStartingBet(startingBet) {
+    var decimalPointCount = 0;
 
-    if (startingBet[0] == '$') {
-        startingBet = parseFloat(startingBet.slice(1));
-    }
-    else {
-        startingBet = parseFloat(startingBet);
+    for (i = 0; i < startingBet.length; i++) {
+        if (startingBet[i] == '.') {
+            decimalPointCount++;
+
+            if (decimalPointCount > 1) {
+                return false;
+            }
+        }
+        /* Check if character is not a number and don't allow spaces */
+        else if (isNaN(startingBet[i]) || startingBet[i] == ' ') {
+            return false;
+        }
     }
 
-    return startingBet;
+    return parseFloat(startingBet);
 }
 
 function validateStartingBet() {
-    var startingBet = parseStartingBet();
+    var startingBet = document.forms['betForm']['startingBet'].value;
 
-    if (isNaN(startingBet) || startingBet <= 0) {
+    /* Remove any leading dollar sign */
+    if (startingBet[0] == '$') {
+        startingBet = startingBet.slice(1);
+    }
+
+    /* Prevent any starting bet that begins with 0 (which also prevents $0) */
+    if (startingBet[0] == '0') {
         return false;
     }
-    else {
-        return startingBet;
-    }
+
+    return scanStartingBet(startingBet);
 }
 
 function rollDice() {
