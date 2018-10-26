@@ -1,5 +1,15 @@
-function rollDice() {
-    return Math.floor(Math.random() * 6) + 1;
+function displayResults(startingBet, rollCountTotal, highestAmount, rollCountAtHighest) {
+    document.getElementById('tableStartingBet').textContent = startingBet;
+    document.getElementById('tableRollCountTotal').textContent = rollCountTotal;
+    document.getElementById('tableHighestAmount').textContent = highestAmount;
+    document.getElementById('tableRollCountAtHighest').textContent = rollCountAtHighest;
+    document.getElementById('results').style.display = 'block';
+    document.getElementById('btnPlay').textContent = 'Play Again';
+}
+
+function displayErrorMsg() {
+    document.getElementById('errorMsg').textContent = 'Please enter a number greater than zero';
+    document.getElementById('errorMsg').style.display = 'block';
 }
 
 function resetStartingBet() {
@@ -16,13 +26,8 @@ function resetOutput() {
     document.getElementById('tableRollCountAtHighest').textContent = '';
 }
 
-function displayResults() {
-    document.getElementById('results').style.display = 'block';
-}
-
-function displayErrorMsg() {
-    document.getElementById('errorMsg').textContent = 'Please enter a number greater than zero';
-    document.getElementById('errorMsg').style.display = 'block';
+function rollDice() {
+    return Math.floor(Math.random() * 6) + 1;
 }
 
 function startGame(startingBet) {
@@ -48,13 +53,7 @@ function startGame(startingBet) {
         }
     }
 
-    document.getElementById('tableStartingBet').textContent = startingBet;
-    document.getElementById('tableRollCountTotal').textContent = rollCountTotal;
-    document.getElementById('tableHighestAmount').textContent = highestAmount;
-    document.getElementById('tableRollCountAtHighest').textContent = rollCountAtHighest;
-
-    document.getElementById('btnPlay').textContent = 'Play Again';
-    displayResults();
+    displayResults(startingBet, rollCountTotal, highestAmount, rollCountAtHighest);
     resetStartingBet();
 }
 
