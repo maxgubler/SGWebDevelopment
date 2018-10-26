@@ -27,6 +27,30 @@ function resetOutput() {
     document.getElementById('tableRollCountAtHighest').textContent = '';
 }
 
+function parseStartingBet() {
+    var startingBet = document.forms['betForm']['startingBet'].value;
+
+    if (startingBet[0] == '$') {
+        startingBet = parseFloat(startingBet.slice(1));
+    }
+    else {
+        startingBet = parseFloat(startingBet);
+    }
+
+    return startingBet;
+}
+
+function validateStartingBet() {
+    var startingBet = parseStartingBet();
+
+    if (isNaN(startingBet) || startingBet <= 0) {
+        return false;
+    }
+    else {
+        return startingBet;
+    }
+}
+
 function rollDice() {
     return Math.floor(Math.random() * 6) + 1;
 }
@@ -56,17 +80,6 @@ function startGame(startingBet) {
 
     displayResults(startingBet, rollCountTotal, highestAmount, rollCountAtHighest);
     resetStartingBet();
-}
-
-function validateStartingBet() {
-    var startingBet = parseFloat(document.forms['betForm']['startingBet'].value);
-
-    if (isNaN(startingBet) || startingBet <= 0) {
-        return false;
-    }
-    else {
-        return startingBet;
-    }
 }
 
 function initialize() {
