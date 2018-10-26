@@ -2,8 +2,26 @@ function rollDice() {
     return Math.floor(Math.random() * 6) + 1;
 }
 
-function startGame() {
-    var startingBet = parseFloat(document.forms['betForm']['startingBet'].value);
+function resetStartingBet() {
+    document.forms['betForm']['startingBet'].value = '';
+    document.forms['betForm']['startingBet'].focus();
+}
+
+function resetOutput() {
+    document.getElementById('errorMsg').textContent = '';
+    document.getElementById('errorMsg').style.display = 'none';
+    document.getElementById('tableStartingBet').textContent = '';
+    document.getElementById('tableRollCountTotal').textContent = '';
+    document.getElementById('tableHighestAmount').textContent = '';
+    document.getElementById('tableRollCountAtHighest').textContent = '';
+}
+
+function displayErrorMsg() {
+    document.getElementById('errorMsg').textContent = 'Please enter a number greater than zero';
+    document.getElementById('errorMsg').style.display = 'block';
+}
+
+function startGame(startingBet) {
     var currentAmount = startingBet;
     var highestAmount = startingBet;
     var rollCountTotal = 0;
@@ -30,10 +48,35 @@ function startGame() {
     document.getElementById('tableRollCountTotal').textContent = rollCountTotal;
     document.getElementById('tableHighestAmount').textContent = highestAmount;
     document.getElementById('tableRollCountAtHighest').textContent = rollCountAtHighest;
+
+    document.getElementById('btnPlay').textContent = 'Play Again';
+    resetStartingBet();
+}
+
+function validateStartingBet() {
+    var startingBet = parseFloat(document.forms['betForm']['startingBet'].value);
+
+    if (isNaN(startingBet) || startingBet <= 0) {
+        return false;
+    }
+    else {
+        return startingBet;
+    }
 }
 
 function initialize() {
-    document.getElementById('btnPlay').addEventListener('click', function(){
-        startGame();
+    document.forms['betForm'].addEventListener('submit', function(e){
+        e.preventDefault();
+        resetOutput();
+
+        var startingBet = validateStartingBet();
+
+        if (startingBet) {
+            startGame(startingBet);
+        }
+        else {
+            displayErrorMsg();
+            resetStartingBet();
+        }
     });
 }
