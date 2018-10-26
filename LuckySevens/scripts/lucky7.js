@@ -64,7 +64,7 @@ function validateStartingBet() {
         return false;
     }
     else {
-        return startingBet;
+        return startingBet.toFixed(2);
     }
 }
 
