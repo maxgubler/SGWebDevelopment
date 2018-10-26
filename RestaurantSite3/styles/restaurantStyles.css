@@ -1,7 +1,7 @@
 /*
 Creator: Max Gubler
 Date Created: October 22, 2018
-Last Modified: October 24, 2018
+Last Modified: October 25, 2018
 */
 
 html, body {
@@ -56,6 +56,7 @@ footer .navbar-dark .navbar-text a:focus, footer .navbar-dark .navbar-text a:hov
 
 .carousel {
     background-color: #E95A4F;
+    color: #FFFFFF;
     min-height: 720px;
 }
 
@@ -63,6 +64,13 @@ footer .navbar-dark .navbar-text a:focus, footer .navbar-dark .navbar-text a:hov
     background-image: url('/images/sample-720.jpg');
     background-position: right;
     min-height: 720px;
+}
+
+#carouselItem3 {
+    background-image: url('/images/wine-glass-black-1280.png');
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .jumbotron {
