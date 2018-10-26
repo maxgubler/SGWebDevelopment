@@ -1,7 +1,7 @@
 function displayResults(startingBet, rollCountTotal, highestAmount, rollCountAtHighest) {
-    document.getElementById('tableStartingBet').textContent = startingBet;
+    document.getElementById('tableStartingBet').textContent = startingBet.toFixed(2);
     document.getElementById('tableRollCountTotal').textContent = rollCountTotal;
-    document.getElementById('tableHighestAmount').textContent = highestAmount;
+    document.getElementById('tableHighestAmount').textContent = highestAmount.toFixed(2);
     document.getElementById('tableRollCountAtHighest').textContent = rollCountAtHighest;
     document.getElementById('results').style.display = 'block';
     document.getElementById('btnPlay').textContent = 'Play Again';
@@ -65,7 +65,7 @@ function validateStartingBet() {
         return false;
     }
     else {
-        return startingBet.toFixed(2);
+        return startingBet;
     }
 }
 
