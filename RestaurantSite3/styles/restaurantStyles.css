@@ -66,6 +66,10 @@ footer .navbar-dark .navbar-text a:focus, footer .navbar-dark .navbar-text a:hov
     min-height: 720px;
 }
 
+#carouselItem2 img {
+    max-width: 75%;
+}
+
 #carouselItem3 {
     background-image: url('/images/wine-glass-black-1280.png');
     background-size: 50%;
