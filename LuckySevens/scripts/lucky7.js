@@ -20,6 +20,7 @@ function resetStartingBet() {
 function resetOutput() {
     document.getElementById('errorMsg').textContent = '';
     document.getElementById('errorMsg').style.display = 'none';
+    document.getElementById('results').style.display = 'none';
     document.getElementById('tableStartingBet').textContent = '';
     document.getElementById('tableRollCountTotal').textContent = '';
     document.getElementById('tableHighestAmount').textContent = '';
@@ -79,6 +80,7 @@ function initialize() {
             startGame(startingBet);
         }
         else {
+            resetOutput();
             displayErrorMsg();
             resetStartingBet();
         }
