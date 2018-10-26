@@ -1,3 +1,4 @@
+/* DOM MODIFICATION */
 function displayResults(startingBet, rollCountTotal, highestAmount, rollCountAtHighest) {
     document.getElementById('tableStartingBet').textContent = startingBet.toFixed(2);
     document.getElementById('tableRollCountTotal').textContent = rollCountTotal;
@@ -27,7 +28,9 @@ function resetOutput() {
     document.getElementById('tableRollCountAtHighest').textContent = '';
 }
 
-/* Check each character for a number or decimal point, allowing only one decimal point */
+
+/* INPUT VALIDATION */
+/* Ensure each character is a number or decimal point, allowing only one decimal point */
 /* This also prevents negative numbers */
 function scanStartingBet(startingBet) {
     var decimalPointCount = 0;
@@ -50,6 +53,7 @@ function scanStartingBet(startingBet) {
 }
 
 function validateStartingBet() {
+    /* Retrieve user input string */
     var startingBet = document.forms['betForm']['startingBet'].value;
 
     /* Remove any leading dollar sign */
@@ -65,6 +69,8 @@ function validateStartingBet() {
     return scanStartingBet(startingBet);
 }
 
+
+/* GAME MECHANICS */
 function rollDice() {
     return Math.floor(Math.random() * 6) + 1;
 }
@@ -96,6 +102,8 @@ function startGame(startingBet) {
     resetStartingBet();
 }
 
+
+/* ONLOAD */
 function initialize() {
     document.forms['betForm'].addEventListener('submit', function(e){
         e.preventDefault();
