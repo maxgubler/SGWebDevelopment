@@ -16,6 +16,10 @@ function resetOutput() {
     document.getElementById('tableRollCountAtHighest').textContent = '';
 }
 
+function displayResults() {
+    document.getElementById('results').style.display = 'block';
+}
+
 function displayErrorMsg() {
     document.getElementById('errorMsg').textContent = 'Please enter a number greater than zero';
     document.getElementById('errorMsg').style.display = 'block';
@@ -50,6 +54,7 @@ function startGame(startingBet) {
     document.getElementById('tableRollCountAtHighest').textContent = rollCountAtHighest;
 
     document.getElementById('btnPlay').textContent = 'Play Again';
+    displayResults();
     resetStartingBet();
 }
 
