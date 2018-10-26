@@ -14,7 +14,7 @@
                 <div class="col-md-12 text-center">
                     <h1>Lucky Sevens</h1>
                 </div>
-                <form class="col-md-12 p-3">
+                <form name="betForm" class="col-md-12 p-3">
                     <div class="form-group form-row">
                         <label for="startingBet" class="col-md-3 offset-md-3 col-form-label text-left">Starting Bet:</label>
                         <div class="col-md-3">
@@ -22,7 +22,7 @@
                         </div>
                     </div>
                     <div class="form-group form-row pt-2">
-                        <button class="btn btn-primary m-auto" type="button">Play</button>
+                        <button id="btnPlay" class="btn btn-primary m-auto" type="button">Play</button>
                     </div>
                 </form>
             </section>
@@ -34,19 +34,19 @@
                 <table class="table table-striped table-bordered table-hover">
                     <tr>
                         <th scope="row">Starting Bet</th>
-                        <td>$</td>
+                        <td>$<span id="tableStartingBet"></span></td>
                     </tr>
                     <tr>
                         <th scope="row">Total Rolls Before Going Broke</th>
-                        <td>#</td>
+                        <td><span id="tableRollCountTotal"></span></td>
                     </tr>
                     <tr>
                         <th scope="row">Highest Amount Won</th>
-                        <td>$</td>
+                        <td>$<span id="tableHighestAmount"></span></td>
                     </tr>
                     <tr>
                         <th scope="row">Roll Count At Highest Amount Won</th>
-                        <td>#</td>
+                        <td><span id="tableRollCountAtHighest"></span></td>
                     </tr>
                 </table>
             </section>
