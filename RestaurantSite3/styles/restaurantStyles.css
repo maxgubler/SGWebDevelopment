@@ -10,7 +10,7 @@ html, body {
 
 main {
     /* Allow room for fixed footer */
-    margin-bottom: 5.5rem;
+    margin-bottom: 6rem;
 }
 
 body {
@@ -43,6 +43,11 @@ header h1 {
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link{
     background-color: #FFFBE9;
+}
+
+footer .navbar
+{
+    min-height: 3rem;
 }
 
 footer .navbar-dark .navbar-text {
@@ -110,7 +115,6 @@ footer .navbar-dark .navbar-text a:focus, footer .navbar-dark .navbar-text a:hov
 
 /* Menu */
 .menuContainer {
-    margin-top: 2rem;
     background-color: #FFFFFF;
     font-family: 'Crimson Text', serif;
 }
@@ -126,7 +130,6 @@ footer .navbar-dark .navbar-text a:focus, footer .navbar-dark .navbar-text a:hov
 
 /* Contact */
 .contactContainer {
-    margin-top: 2rem;
     background-color: #FFFFFF;
 }
 
