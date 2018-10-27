@@ -118,6 +118,11 @@ footer .navbar-dark .navbar-text a:focus, footer .navbar-dark .navbar-text a:hov
     font-weight: bold;
 }
 
+#menuAbout {
+    font-size: 0.75em;
+    font-style: italic;
+}
+
 /* Contact */
 .contactContainer {
     margin-top: 2rem;
