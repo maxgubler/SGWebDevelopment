@@ -83,7 +83,8 @@ Last Modified: October 25, 2018
                         <!-- Telephone -->
                         <div class="form-group">
                             <label for="phone">Phone</label>
-                            <input name="phone" id="phone" class="form-control" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-555-5555" type="tel" required>
+                            <!-- RegEx pattern for HTML5 validation -->
+                            <input name="phone" id="phone" class="form-control" pattern="^(1\s?)?((\([0-9]{3}\))|[0-9]{3})[\s\-]?[\0-9]{3}[\s\-]?[0-9]{4}$" placeholder="555-123-9876" type="tel" required>
                         </div>
 
                         <!-- Reason for inquiry -->
