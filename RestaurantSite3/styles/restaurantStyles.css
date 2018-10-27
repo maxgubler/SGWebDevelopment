@@ -107,11 +107,7 @@ footer .navbar-dark .navbar-text a:focus, footer .navbar-dark .navbar-text a:hov
     font-family: 'Crimson Text', serif;
 }
 
-.menuItem {
-    padding: 1em 0;
-}
-
-.menuItem div:nth-child(1) {
+.menuItemTitle {
     font-weight: bold;
 }
 
