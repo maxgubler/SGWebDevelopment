@@ -100,6 +100,13 @@ footer .navbar-dark .navbar-text a:focus, footer .navbar-dark .navbar-text a:hov
     font-size: 2.5em;
 }
 
+#about {
+    background-color: #3B444C;
+    color: #FFFFFF;
+    font-family: 'Fira Sans', serif;
+    font-size: 0.85em;
+}
+
 /* Menu */
 .menuContainer {
     margin-top: 2rem;
