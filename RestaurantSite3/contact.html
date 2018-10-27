@@ -2,7 +2,7 @@
 <!--
 Creator: Max Gubler
 Date Created: October 20, 2018
-Last Modified: October 25, 2018
+Last Modified: October 26, 2018
 -->
 <html lang="en">
     <head>
@@ -62,7 +62,7 @@ Last Modified: October 25, 2018
             <section class="row">
                 <article class="col-12 p-5">
                     <form name="contactForm" onsubmit="return validate(target);" class="needs-validation">
-                        <!-- First and Last Name -->
+                        <!-- First and last name -->
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="firstName">First name</label>
@@ -117,9 +117,9 @@ Last Modified: October 25, 2018
                             </div>
                         </div>
 
-                        <!-- Contact day -->
+                        <!-- Contact day (optional) -->
                         <div class="form-group">
-                            <label class="d-block">Best days to contact you</label>
+                            <label class="d-block">Best days to contact you (optional)</label>
                             <div class="form-check form-check-inline">
                                 <input name="contactDay" id="checkMonday" value="monday" class="form-check-input" type="checkbox">
                                 <label for="checkMonday" class="form-check-label">Mon</label>
@@ -142,6 +142,7 @@ Last Modified: October 25, 2018
                             </div>
                         </div>
 
+                        <!-- Confirmation message -->
                         <div id="results" class="form-group" style="display: none;"></div>
 
                         <!-- Submit -->
