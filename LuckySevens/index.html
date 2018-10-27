@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Lucky Sevens</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    </head>
+    <body onload="initialize()">
+        <main class="container p-5">
+            <section class="row">
+                <div class="col-12 text-center">
+                    <h1>Lucky Sevens</h1>
+                </div>
+                <form name="betForm" class="col-12 p-3">
+                    <div class="form-group form-row mb-0">
+                        <label for="startingBet" class="col-sm-3 offset-sm-3 col-md-2 offset-md-4 col-form-label text-left">Starting Bet:</label>
+                        <div class="col-sm-3 col-md-2">
+                          <input id="startingBet" name="startingBet" type="text" class="form-control" placeholder="$0.00">
+                        </div>
+                    </div>
+                    <div class="form-group form-row p-2 mb-0">
+                        <span id="errorMsg" class="m-auto" style="height: 1em; visibility: hidden;"></span>
+                    </div>
+                    <div class="form-group form-row pt-2">
+                        <button id="btnPlay" class="btn btn-primary m-auto" style="min-width: 7em;" type="submit">Play</button>
+                    </div>
+                </form>
+            </section>
+
+            <section id="results" class="row" style="display: none;">
+                <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
+                    <hr class="my-4 w-100">
+                    <div class="col-12 text-center">
+                        <h1>Results</h1>
+                    </div>
+                    <table class="table table-striped table-bordered table-hover">
+                        <tr>
+                            <th scope="row">Starting Bet</th>
+                            <td>$<span id="tableStartingBet"></span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Total Rolls Before Going Broke</th>
+                            <td><span id="tableRollCountTotal"></span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Highest Amount Won</th>
+                            <td>$<span id="tableHighestAmount"></span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Roll Count At Highest Amount Won</th>
+                            <td><span id="tableRollCountAtHighest"></span></td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </main>
+        <script type="text/javascript" src="scripts/lucky7.js"></script>
+    </body>
+</html>
