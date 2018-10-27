@@ -14,7 +14,7 @@ main {
 }
 
 body {
-    background-image: url('/images/bg-1920w.jpg');
+    background-image: url('../images/bg-1920w.jpg');
     background-position: center;
     background-size: 1920px;
     background-repeat: repeat-y;
@@ -66,7 +66,7 @@ footer .navbar-dark .navbar-text a:focus, footer .navbar-dark .navbar-text a:hov
 }
 
 .carouselSide {
-    background-image: url('/images/sample-720.jpg');
+    background-image: url('../images/sample-720.jpg');
     background-position: right;
     min-height: 720px;
 }
