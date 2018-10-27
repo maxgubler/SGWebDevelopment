@@ -121,3 +121,8 @@ footer .navbar-dark .navbar-text a:focus, footer .navbar-dark .navbar-text a:hov
     background-color: #F4CF3B;
     border: 1px solid #CED4dA;
 }
+
+#results {
+    color: #228B22;
+    font-weight: bold;
+}
