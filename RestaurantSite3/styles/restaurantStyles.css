@@ -10,7 +10,7 @@ html, body {
 
 main {
     /* Allow room for fixed footer */
-    margin-bottom: 5em;
+    margin-bottom: 5.5rem;
 }
 
 body {
