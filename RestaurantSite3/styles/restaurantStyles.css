@@ -1,7 +1,7 @@
 /*
 Creator: Max Gubler
 Date Created: October 22, 2018
-Last Modified: October 26, 2018
+Last Modified: October 27, 2018
 */
 
 html, body {
@@ -68,6 +68,7 @@ footer .navbar-dark .navbar-text a:focus, footer .navbar-dark .navbar-text a:hov
 
 .jumbotron {
     padding: 0;
+    margin-bottom: 0;
     border-radius: 0 0 0.3rem 0.3rem;
     background-color: #FFFFFF;
     border-left: 1px solid #F4CF3B;
